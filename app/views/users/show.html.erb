@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title> EventBrite V1 </title>
+    </head>
+    <body>
+    <br>
+        <h2> Voici ton profil personnel, <b> <%= current_user.first_name %> <%= current_user.last_name %></b> </h2><br>
+            <p>
+              <h4> Description : <%= current_user.description %></h3>
+              <h4> Email : <%= current_user.email %> </h3>
+
+              <h4> Pour modifier ces informations, <%= link_to 'Clique ici', edit_user_registration_path %>
+
+            </p>
+
+
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Salut <%= @attendance.user.first_name %> et merci de ton inscription à l'évènement <%= @attendance.event.title!</h1>
+    <p>
+      Nous t'attendons donc le <%= @attendance.event.start_date %> à <%= @attendance.event.location %>.
+    </p>
+    <p>
+      N'hésite pas à nous prévenir en cas d'annulation. 
+    </p>
+    <p> À très vite sur monsite.fr !
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> The EventBrite V1 </title>
+    </head>
+    <body>
+    <br>
+        <h2> Welcome on the EventBrite ! </h2>
+        <h4> Voici la liste des différents événements de ta ville </h4>
+
+        <% if @events != nil && @events.count > 0 %>
+
+          <% @events.each do |event| %>
+            <p>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body"
+                  <h3 class="card-title"><u> Event n° <%= event.id %></u></h3>
+                  <h4 class="card-text"> Titre : <%= event.title %><br> 
+                  <h4 class="card-text"> Prix : <%= event.price %><br> 
+                  <h5>Et voici <%= link_to 'le lien', event_path(event.id) %> vers l'événement !</h5>
+              
+                </div>
+              </div>
+            </p>
+          <% end %>
+
+         <% else %>
+           <br>
+           <h3><i> Malheuresuement il n'y a pas d'événement prévu...</i></h3>
+
+        <% end %>
+
+
+
+    </body>
+</html>

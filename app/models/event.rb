@@ -12,11 +12,11 @@ class Event < ApplicationRecord
         length: {in: 5..140}
 
     validates :description
-        presence: true
+        presence: true,
         length: {in:20..1000}
 
     validates :price
-        presence: true
+        presence: true,
         numericality: {greater_than: 1, less_than: 1000}
 
     validates :location, presence:true
@@ -25,5 +25,6 @@ class Event < ApplicationRecord
     belongs_to :user
     has_many :attendances
     has_many :users, through: :attendances
+
 
 end
