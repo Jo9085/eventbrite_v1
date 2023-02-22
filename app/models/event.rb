@@ -3,19 +3,19 @@ class Event < ApplicationRecord
         presence: true,
         comparison: {greater_than: Date.today}
 
-    validates :duration
+    validates :duration,
         presence: true,
         numericality: {only_integer: true, greater_than: 0}
 
-    validates :title
-        presence: true, 
+    validates :title,
+        presence: true,
         length: {in: 5..140}
 
-    validates :description
+    validates :description,
         presence: true,
         length: {in:20..1000}
 
-    validates :price
+    validates :price,
         presence: true,
         numericality: {greater_than: 1, less_than: 1000}
 

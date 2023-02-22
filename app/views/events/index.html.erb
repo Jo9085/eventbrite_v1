@@ -16,7 +16,7 @@
                   <h3 class="card-title"><u> Event n° <%= event.id %></u></h3>
                   <h4 class="card-text"> Titre : <%= event.title %><br> 
                   <h4 class="card-text"> Prix : <%= event.price %><br> 
-                  <h5>Et voici <%= link_to 'le lien', event_path(event.id) %> vers l'événement !</h5>
+                  <h5>Et voici <%= link_to 'le lien' %> vers l'événement !</h5>
               
                 </div>
               </div>
@@ -25,7 +25,7 @@
 
          <% else %>
            <br>
-           <h3><i> Malheuresuement il n'y a pas d'événement prévu...</i></h3>
+           <h3><i> Malheureusement il n'y a pas d'événement prévu...</i></h3>
 
         <% end %>
 

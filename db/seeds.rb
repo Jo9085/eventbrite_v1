@@ -1,5 +1,7 @@
-User.destroy_all
+Event.destroy_all
+
+
 
 10.times do
-    User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.first_name, description: Faker::Lorem.sentence(word_count: 10), email: Faker::Internet.email(domain: 'yopmail.com'), encrypted_password: Faker::Internet.password)
-end
+    Event.create(start_date: Faker::Time.forward(days: rand(1..15), period: :all), duration: rand(3..24) * 5, title: Faker::Lorem.sentence(word_count: 1, random_words_to_add: 2).chop, description: Faker::Lorem.paragraph(sentence_count: 2, random_sentences_to_add: 2), price: rand(5..200), location: Faker::Address.city, user: User.all.sample)
+  end
